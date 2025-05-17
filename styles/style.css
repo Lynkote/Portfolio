@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/*Roboto Slab*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/*Roboto Condensed*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap'); 
+
+/*Pixelify Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/* Fonts */
+:root {
+  --name-font: "Roboto Slab";
+  --main-font: "Roboto Condensed";
+  --link-font: "Pixelify Sans";
+}
+
+/* Colors */
+:root {
+  --link: #669BBC;
+}
+
+/* STYLES */
+body {
+  background-color: white;
+}
+
+header::selection, p::selection {
+  color: white;
+  background-color: black;
+}
+
+a {
+  font-family: var(--link-font);
+  color: var(--link);
+  transition: 0.2s;
+}
+a:hover {
+  text-decoration: underline;
+}
+a::selection {
+  color: var(--link);
+}
+
+/* Header */
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  cursor: default;
+}
+header::selection {
+  background-color: white;
+  color: black;
+}
+
+header h1 {
+  font-family: var(--name-font);
+}
+
+header h2 {
+  opacity: 0.6;
+  font-family: var(--main-font);
+}
+
+/* Social Section */
+nav {
+  text-align: center;
+  padding: 10px;
+}
+nav a::selection {
+  background-color: black;
+}
+
+main {
+  font-family: var(--main-font);
+}
+
+/* About me Section*/
+#bio {
+  padding: 10px;
+  cursor: default;
+  border-top: solid 1px #00000020;
+  border-bottom: solid 1px #00000020;
+  text-align: center;
+}
+
+/*projects*/
+#projects {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background-color: grey;
+  /* change background-image on js*/
+  width: 160px;
+  height: 200px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+}
+.card:hover {
+  scale: 1.02;
+}
+.card::selection {
+  background-color: transparent;
+}
+
+.card p {
+  color: white;
+  width: 100%;
+  padding: 4px 0;
+  font-weight: bold;
+  background-color: #00000040;
+  position: absolute;
+  top: 0;
+  transition: 0.2s;
+}
+.card:hover p {
+  opacity: 0;
+}
+.card:hover p:hover {
+  opacity: 1;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+}

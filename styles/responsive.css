@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* RESPONSSIVE */
+/*Tablets*/
+@media (min-width: 700px) {
+  header, #bio, nav {
+    font-size: 2em;
+  }
+  
+  #bio {
+    padding: 30px;
+  }
+  
+  #projects {
+    grid-template-columns: 1fr 1fr 1fr
+  }
+}
+
+@media (min-width: 1000px) {
+  #bio, nav {
+    font-size: 2.5em;
+  }
+  
+  .card {
+    height: 400px;
+    width: 320px;
+    font-size: 2em;
+  }
+}
+
+/*portatil/desktop/laptop/*/
+@media (min-width: 1300px) {
+  #bio {
+    padding: 30px;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card p {
+    padding: 8px 0;
+  }
+}
